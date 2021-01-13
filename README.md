@@ -2,7 +2,7 @@
 
 VS Code Syntax Highlighting For Haskell HSX QuasiQuotes
 
-![Demo](./demo.png)
+![Demo](./code-demo.png)
 
 ## Enabling [Emmet](https://emmet.io/) Inside HSX Blocks
 
