@@ -3,7 +3,7 @@
   "publisher": "s0kil",
   "displayName": "Haskell HSX",
   "description": "Syntax Highlighting For Haskell HSX QuasiQuotes",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/s0kil/vscode-hsx.git"
