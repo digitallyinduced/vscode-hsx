@@ -1,0 +1,44 @@
+{
+  "fileTypes": [],
+  "injectionSelector": "L:source.haskell -comment -(string -meta.embedded)",
+  "injections": {
+    "L:source": {
+      "patterns": [
+        {
+          "match": "<",
+          "name": "invalid.illegal.bad-angle-bracket.html"
+        }
+      ]
+    }
+  },
+  "patterns": [
+    {
+      "name": "meta.embedded.block.hsx",
+      "contentName": "meta.embedded.block.html",
+      "begin": "(?x)(\\[)(hsx)(\\|)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.operator.quasi-quotation.begin.haskell"
+        },
+        "2": {
+          "name": "entity.name.quasi-quoter.haskell"
+        },
+        "3": {
+          "name": "keyword.operator.quasi-quotation.begin.haskell"
+        }
+      },
+      "end": "(\\|\\])",
+      "endCaptures": {
+        "0": {
+          "name": "keyword.operator.quasi-quotation.end.haskell"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.basic"
+        }
+      ]
+    }
+  ],
+  "scopeName": "inline.hsx"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "vscode-hsx",
+  "publisher": "s0kil",
+  "displayName": "Haskell HSX",
+  "description": "Syntax Highlighting For Haskell HSX QuasiQuotes",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/s0kil/vscode-hsx.git"
+  },
+  "engines": {
+    "vscode": "^1.29.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "hsx",
+    "haskell"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "injectTo": [
+          "source.haskell"
+        ],
+        "scopeName": "inline.hsx",
+        "path": "./syntaxes/hsx.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.html": "html",
+          "meta.embedded.block.css": "css",
+          "source.css": "css"
+        }
+      }
+    ]
+  }
+}
