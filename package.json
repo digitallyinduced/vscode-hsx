@@ -31,6 +31,16 @@
           "meta.embedded.block.css": "css",
           "source.css": "css"
         }
+      },
+      {
+        "injectTo": [
+          "source.haskell"
+        ],
+        "scopeName": "inline.hsx.injection",
+        "path": "./syntaxes/hsx-injection.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.hsx": "haskell"
+        }
       }
     ]
   }

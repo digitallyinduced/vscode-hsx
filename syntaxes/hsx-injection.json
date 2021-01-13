@@ -1,0 +1,20 @@
+{
+  "fileTypes": [],
+  "injectionSelector": "L:meta.embedded.block.hsx",
+  "patterns": [
+    {
+      "name": "source.haskell",
+      "contentName": "source.haskell",
+      "begin": "(\\{)",
+      "beginCaptures": {},
+      "end": "(\\})",
+      "endCaptures": {},
+      "patterns": [
+        {
+          "include": "source.haskell"
+        }
+      ]
+    }
+  ],
+  "scopeName": "inline.hsx.injection"
+}
