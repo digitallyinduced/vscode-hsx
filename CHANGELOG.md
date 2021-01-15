@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.1
+
+- Update Description To Include IntelliSense
+
 ## 0.2.0
 
 - Integrate VS Code HTML Language Server
