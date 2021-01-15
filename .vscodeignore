@@ -1,3 +1,11 @@
-.vscode/**
-.vscode-test/**
+!dist
+.gitattributes
 .gitignore
+.prettierrc
+.vscode
+client/
+node_modules
+rollup.config.js
+server/
+tsconfig.json
+webpack.config.js
