@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "vscode-html-languageservice": "^4.0.0",
+    "vscode-languageclient": "^7.0.0",
+    "vscode-languageserver-textdocument": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.52.0"
+  },
+  "engines": {
+    "vscode": "^1.43.0"
+  }
+}
