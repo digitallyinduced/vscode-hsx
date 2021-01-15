@@ -1,6 +1,6 @@
 # vscode-hsx
 
-VS Code Syntax Highlighting For Haskell HSX QuasiQuotes
+VS Code Syntax Highlighting And IntelliSense For Haskell HSX QuasiQuotes
 
 ![Demo](./code-demo.png)
 
