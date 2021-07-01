@@ -1,7 +1,7 @@
 {
   "name": "vscode-hsx",
   "displayName": "Haskell HSX",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Syntax Highlighting And IntelliSense For Haskell HSX QuasiQuotes",
   "categories": [
     "Programming Languages"
@@ -67,7 +67,7 @@
   },
   "icon": "icon.png",
   "galleryBanner": {
-    "color": "#904f8c",
+    "color": "#ffffff",
     "theme": "light"
   }
 }
