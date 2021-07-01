@@ -3,11 +3,12 @@
   "injectionSelector": "L:meta.embedded.block.hsx",
   "patterns": [
     {
+      "comment": "Matches {} Inside An HTML Element Attribute: <p id={}></p>",
       "name": "source.haskell",
       "contentName": "source.haskell",
-      "begin": "(\\{)",
+      "begin": "(?!<[\\s\\S]*?)(={)",
       "beginCaptures": {},
-      "end": "(\\})",
+      "end": "(?!<[\\s\\S]*)(})(?=[\\s]*>)",
       "endCaptures": {},
       "patterns": [
         {

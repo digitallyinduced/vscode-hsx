@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.3.0
+
+- Fix Broken JavaScript/CSS Highlighting
+
 ## 0.2.1
 
 - Update Description To Include IntelliSense

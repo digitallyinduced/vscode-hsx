@@ -9,3 +9,4 @@ rollup.config.js
 server/
 tsconfig.json
 webpack.config.js
+icon.xcf

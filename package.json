@@ -1,7 +1,7 @@
 {
   "name": "vscode-hsx",
   "displayName": "Haskell HSX",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Syntax Highlighting And IntelliSense For Haskell HSX QuasiQuotes",
   "categories": [
     "Programming Languages"
@@ -21,7 +21,8 @@
     "watch": "tsc -b -w",
     "bundle": "rollup -c",
     "postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
-    "vscode:prepublish": "npm install && npm run compile && npm run bundle"
+    "vscode:prepublish": "npm install && npm run compile && npm run bundle",
+    "package": "vsce package"
   },
   "contributes": {
     "grammars": [
@@ -53,15 +54,20 @@
     "onLanguage:haskell"
   ],
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-node-resolve": "^11.1.0",
-    "@types/node": "^14.14.21",
-    "esbuild": "^0.8.32",
-    "rollup": "^2.36.1",
-    "rollup-plugin-esbuild": "^2.6.1",
-    "typescript": "^4.1.3"
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@types/node": "^15.12.5",
+    "esbuild": "^0.12.13",
+    "rollup": "^2.52.6",
+    "rollup-plugin-esbuild": "^4.5.0",
+    "typescript": "^4.3.5"
   },
   "engines": {
-    "vscode": "^1.43.0"
+    "vscode": "^1.57.0"
+  },
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#904f8c",
+    "theme": "light"
   }
 }
