@@ -1,5 +1,3 @@
-// Forked From: https://github.com/microsoft/vscode-extension-samples/blob/master/lsp-embedded-request-forwarding/client/src/extension.ts
-
 import * as path from "path"
 import {
   commands,
@@ -10,7 +8,6 @@ import {
 } from "vscode"
 import { getLanguageService } from "vscode-html-languageservice"
 import {
-  CloseAction,
   LanguageClient,
   LanguageClientOptions,
   ServerOptions,
@@ -24,14 +21,14 @@ const htmlLanguageService = getLanguageService()
 
 export function activate(context: ExtensionContext) {
   // The server is implemented in node
-  let serverModule = context.asAbsolutePath(path.join("dist", "server.js"))
+  const serverModule = context.asAbsolutePath(path.join("dist", "server.js"))
   // The debug options for the server
   // --inspect=6009: runs the server in Node's Inspector mode so VS Code can attach to the server for debugging
-  let debugOptions = { execArgv: ["--nolazy", "--inspect=6009"] }
+  const debugOptions = { execArgv: ["--nolazy", "--inspect=6009"] }
 
   // If the extension is launched in debug mode then the debug server options are used
   // Otherwise the run options are used
-  let serverOptions: ServerOptions = {
+  const serverOptions: ServerOptions = {
     run: { module: serverModule, transport: TransportKind.ipc },
     debug: {
       module: serverModule,
@@ -50,7 +47,7 @@ export function activate(context: ExtensionContext) {
     },
   })
 
-  let clientOptions: LanguageClientOptions = {
+  const clientOptions: LanguageClientOptions = {
     documentSelector: [{ scheme: "file", language: "haskell" }],
     middleware: {
       provideCompletionItem: async (
@@ -68,7 +65,7 @@ export function activate(context: ExtensionContext) {
             document.offsetAt(position),
           )
         ) {
-          return await next(document, position, context, token)
+          return next(document, position, context, token)
         }
 
         const originalUri = document.uri.toString()
@@ -81,7 +78,7 @@ export function activate(context: ExtensionContext) {
           originalUri,
         )}.css`
         const vdocUri = Uri.parse(vdocUriString)
-        return await commands.executeCommand<CompletionList>(
+        return commands.executeCommand<CompletionList>(
           "vscode.executeCompletionItemProvider",
           vdocUri,
           position,
