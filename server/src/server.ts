@@ -1,5 +1,3 @@
-// Forked From: https://github.com/microsoft/vscode-extension-samples/blob/master/lsp-embedded-request-forwarding/server/src/server.ts
-
 import { getLanguageService } from "vscode-html-languageservice"
 import {
   createConnection,
@@ -12,11 +10,11 @@ import { TextDocument } from "vscode-languageserver-textdocument"
 
 // Create a connection for the server. The connection uses Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
-let connection = createConnection(ProposedFeatures.all)
+const connection = createConnection(ProposedFeatures.all)
 
 // Create a simple text document manager. The text document manager
 // supports full document sync only
-let documents: TextDocuments<TextDocument> = new TextDocuments(TextDocument)
+const documents: TextDocuments<TextDocument> = new TextDocuments(TextDocument)
 
 const htmlLanguageService = getLanguageService()
 
@@ -32,7 +30,7 @@ connection.onInitialize((_params: InitializeParams) => {
   }
 })
 
-connection.onCompletion(async (textDocumentPosition, token) => {
+connection.onCompletion(async (textDocumentPosition) => {
   const document = documents.get(textDocumentPosition.textDocument.uri)
   if (!document) {
     return null

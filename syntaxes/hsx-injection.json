@@ -1,21 +1,30 @@
 {
+  "scopeName": "inline.hsx.injection",
   "fileTypes": [],
-  "injectionSelector": "L:meta.embedded.block.hsx",
+  "injectionSelector": "L:meta.embedded.block.hsx - (source.js, source.css)",
   "patterns": [
     {
-      "comment": "Matches {} Inside An HTML Element Attribute: <p id={}></p>",
-      "name": "source.haskell",
-      "contentName": "source.haskell",
-      "begin": "(?!<[\\s\\S]*?)(={)",
-      "beginCaptures": {},
-      "end": "(?!<[\\s\\S]*)(})(?=[\\s]*>)",
-      "endCaptures": {},
+      "comment": "Matches {} Inside HSX: [hsx|{}|]",
+      "contentName": "meta.embedded.block.haskell",
+      "begin": "{",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.section.embedded.begin.haskell"
+        }
+      },
+      "end": "}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.section.embedded.end.haskell"
+        }
+      },
       "patterns": [
         {
+          "begin": "\\G\\s*(?={)",
+          "end": "(?<=})",
           "include": "source.haskell"
         }
       ]
     }
-  ],
-  "scopeName": "inline.hsx.injection"
+  ]
 }

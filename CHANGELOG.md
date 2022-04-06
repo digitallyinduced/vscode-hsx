@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.4.0
+
+- Fix Syntax Highlighting Stops Working When Interpolating Haskell
+
 ## 0.3.0
 
 - Fix Broken JavaScript/CSS Highlighting
