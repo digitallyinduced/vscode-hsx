@@ -34,9 +34,10 @@
         "scopeName": "inline.hsx",
         "path": "./syntaxes/hsx.json",
         "embeddedLanguages": {
-          "meta.embedded.block.html": "html",
-          "meta.embedded.block.css": "css",
-          "source.css": "css"
+          "meta.embedded.block.hsx": "html",
+          "text.html": "html",
+          "source.css": "css",
+          "source.js": "javascript"
         }
       },
       {
@@ -46,7 +47,8 @@
         "scopeName": "inline.hsx.injection",
         "path": "./syntaxes/hsx-injection.json",
         "embeddedLanguages": {
-          "meta.embedded.block.hsx": "haskell"
+          "meta.embedded.block.haskell": "haskell",
+          "source.haskell": "haskell"
         }
       }
     ]

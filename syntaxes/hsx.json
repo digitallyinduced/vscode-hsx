@@ -1,21 +1,11 @@
 {
+  "scopeName": "inline.hsx",
   "fileTypes": [],
   "injectionSelector": "L:source.haskell -comment -(string -meta.embedded)",
-  "injections": {
-    "L:source": {
-      "patterns": [
-        {
-          "match": "<",
-          "name": "invalid.illegal.bad-angle-bracket.html"
-        }
-      ]
-    }
-  },
   "patterns": [
     {
-      "name": "meta.embedded.block.hsx",
-      "contentName": "meta.embedded.block.html",
-      "begin": "(?x)(\\[)(hsx)(\\|)",
+      "contentName": "meta.embedded.block.hsx",
+      "begin": "(\\[)(hsx)(\\|)",
       "beginCaptures": {
         "1": {
           "name": "keyword.operator.quasi-quotation.begin.haskell"
@@ -39,6 +29,5 @@
         }
       ]
     }
-  ],
-  "scopeName": "inline.hsx"
+  ]
 }
