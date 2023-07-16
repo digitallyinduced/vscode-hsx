@@ -4,6 +4,17 @@
   "injectionSelector": "L:meta.embedded.block.hsx - (source.js, source.css)",
   "patterns": [
     {
+      "begin": "{-",
+      "end": "-}",
+      "name": "comment.block.haskell",
+      "patterns": [
+        {
+          "match": "[^\\-]+",
+          "name": "comment.block.haskell"
+        }
+      ]
+    },
+    {
       "comment": "Matches {} Inside HSX: [hsx|{}|]",
       "contentName": "meta.embedded.block.haskell",
       "begin": "{",
