@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.5.0
+
+- Add Syntax Highlighting For Haskell Comments Inside Of IHP HSX Blocks
+
 ## 0.4.0
 
 - Fix Syntax Highlighting Stops Working When Interpolating Haskell
